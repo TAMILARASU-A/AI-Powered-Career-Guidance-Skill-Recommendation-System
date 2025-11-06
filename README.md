@@ -1,15 +1,15 @@
-🎯 AI-Powered Career Guidance & Skill Recommendation System
+**🎯 AI-Powered Career Guidance & Skill Recommendation System**
 
 An intelligent big-data application that analyzes student skills, academic performance, and job-market data to provide personalized career guidance and skill recommendations, powered by PySpark, Streamlit, and Plotly.
 
-📘 Overview
+**📘 Overview**
 
 This project leverages Big Data Processing with PySpark to analyze student skill profiles and job postings at scale.
 It matches students with relevant job roles using Jaccard similarity and visualizes job-market trends such as industry demand and average salary.
 
 A Streamlit dashboard enables students and administrators to interactively explore recommendations, manage data via CRUD operations, and gain actionable insights for career planning.
 
-🚀 Key Features
+**🚀 Key Features**
 
 ✅ Data Processing with PySpark – Load, clean, and transform large CSV datasets.
 ✅ ETL Pipeline – Extract, Transform, and Load (ETL) with schema inference and tokenization.
@@ -19,21 +19,21 @@ A Streamlit dashboard enables students and administrators to interactively explo
 ✅ Interactive Streamlit Dashboard – View recommendations, insights, and manage data visually.
 ✅ Scalable & Future-Ready – Ready for ML, NLP, and API-integration extensions.
 
-🧠 System Workflow
+**🧠 System Workflow**
 
-1️⃣ Data Loading
+**1️⃣ Data Loading**
 
 Load career_recommender.csv (students) and all_job_post.csv (jobs).
 
 Infer schema automatically and handle multi-line CSVs.
 
-2️⃣ Data Cleaning & Tokenization
+**2️⃣ Data Cleaning & Tokenization**
 
 Remove null/missing values.
 
 Tokenize and normalize skills using PySpark UDF.
 
-3️⃣ Skill Matching
+**3️⃣ Skill Matching**
 
 Perform cross-join between students and jobs.
 
@@ -42,7 +42,7 @@ Compute skill-match percentage using Jaccard similarity:
 Skill Match (%)=∣𝑆𝑘𝑖𝑙𝑙𝑠𝑠𝑡𝑢𝑑𝑒𝑛𝑡∩𝑆𝑘𝑖𝑙𝑙𝑠𝑗𝑜𝑏 ∣
  ∣𝑆𝑘𝑖𝑙𝑙𝑠𝑠𝑡𝑢𝑑𝑒𝑛𝑡∪𝑆𝑘𝑖𝑙𝑙𝑠𝑗𝑜𝑏 ∣ ×100 
 
-4️⃣ CRUD Operations
+**4️⃣ CRUD Operations**
 
 Create → Add new recommendation
 
@@ -52,24 +52,26 @@ Update → Modify match percentage
 
 Delete → Remove recommendation
 
-5️⃣ Visualization
+**5️⃣ Visualization**
 
 Job-market insights using Plotly Express bar charts.
 
 Top 10 industries and skill-based recommendations.
 
-6️⃣ Streamlit Dashboard
+**6️⃣ Streamlit Dashboard**
 
 View, manage, and interact with recommendations in a modern UI.
 
-🧩 Tech Stack
+
+**🧩 Tech Stack**
 Category	Tools / Libraries	Purpose
 Big Data Processing	PySpark	ETL, transformations, analytics
 Web Framework	Streamlit	User interface & CRUD management
 Visualization	Plotly Express	Charts and job-market insights
 Data Manipulation	Pandas	Convert Spark DataFrames for UI
 Python Core	re, os	String cleaning & environment setup
-📂 Project Structure
+
+**📂 Project Structure**
 career-guidance/
 │
 ├── app.py                   # Streamlit dashboard
@@ -83,55 +85,46 @@ career-guidance/
 ├── requirements.txt         # Dependencies
 └── README.md                # Project documentation
 
-🧪 Sample Data Schema
-🎓 career_recommender.csv (Student Data)
-Column	Type	Example
-student_id	int	101
-student_name	string	Aadil
-student_raw_skills	string	Python, SQL, ML, Pandas
-cgpa	double	8.2
-preferred_location	string	Chennai
-💼 all_job_post.csv (Job Data)
-Column	Type	Example
-job_id	int	501
-job_title	string	Data Analyst
-industry	string	IT/Software
-job_raw_skills	string	SQL, Excel, Python
-avg_salary	double	700000
-location	string	Chennai
-⚙️ Installation & Setup
-1️⃣ Clone this repository
+
+
+
+
+
+**⚙️ Installation & Setup**
+**1️⃣ Clone this repository**
 git clone https://github.com/<your-username>/AI-Career-Guidance-System.git
 cd AI-Career-Guidance-System
 
-2️⃣ Create and activate a virtual environment
+**2️⃣ Create and activate a virtual environment**
 python -m venv .venv
 source .venv/bin/activate    # (Windows: .venv\Scripts\activate)
 
-3️⃣ Install dependencies
+**3️⃣ Install dependencies**
 pip install -r requirements.txt
 
-4️⃣ Run PySpark ETL
+**4️⃣ Run PySpark ETL**
 python spark_etl.py
 
-5️⃣ Launch the Streamlit Dashboard
+**5️⃣ Launch the Streamlit Dashboard**
 streamlit run app.py
 
-📊 Dashboard Preview
 
-1️⃣ Job-Market Insights
+
+**📊 Dashboard Preview**
+
+**1️⃣ Job-Market Insights**
 
 Displays industry-wise job demand and average salary using interactive bar charts.
 
-2️⃣ Personalized Recommendations
+**2️⃣ Personalized Recommendations**
 
 Select a student → view top job matches ranked by skill-match %.
 
-3️⃣ Manage Recommendations (CRUD)
+**3️⃣ Manage Recommendations (CRUD)**
 
 Add, update, or delete student-job matches directly.
 
-🔮 Future Enhancements
+**🔮 Future Enhancements**
 
 🤖 Machine Learning: Predict best-fit roles and expected salaries.
 
@@ -143,7 +136,9 @@ Add, update, or delete student-job matches directly.
 
 📈 Advanced Dashboards: Use Streamlit or Plotly Dash for deeper insights.
 
-💻 Requirements
+
+
+**💻 Requirements**
 Dependency	Version
 Python	3.9+
 PySpark	≥ 3.5.0
