@@ -72,19 +72,19 @@ Data Manipulation	Pandas	Convert Spark DataFrames for UI
 Python Core	re, os	String cleaning & environment setup
 
 **📂 Project Structure**
-career-guidance/
+**career-guidance/
 │
-├── app.py                   # Streamlit dashboard
-├── spark_etl.py             # PySpark ETL + similarity computation
-├── utils.py                 # Skill tokenizer helper
+├── app.py                   
+├── spark_etl.py             
+├── utils.py                 
 ├── data/
 │   ├── career_recommender.csv
 │   ├── all_job_post.csv
 │   ├── recommendations.parquet
 │
-├── requirements.txt         # Dependencies
-└── README.md                # Project documentation
-
+├── requirements.txt         
+└── README.md            
+**
 
 
 
