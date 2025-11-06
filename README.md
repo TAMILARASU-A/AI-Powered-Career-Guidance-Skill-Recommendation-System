@@ -1,171 +1,157 @@
-**🎯 AI-Powered Career Guidance & Skill Recommendation System**
 
-An intelligent big-data application that analyzes student skills, academic performance, and job-market data to provide personalized career guidance and skill recommendations, powered by PySpark, Streamlit, and Plotly.
+# 🎯 AI-Powered Career Guidance & Skill Recommendation System
 
-**📘 Overview**
+This project helps students find suitable career paths and skill recommendations based on their academic performance and skill set.
+It uses **PySpark** for handling large datasets and **Streamlit** for a simple interactive interface.
 
-This project leverages Big Data Processing with PySpark to analyze student skill profiles and job postings at scale.
-It matches students with relevant job roles using Jaccard similarity and visualizes job-market trends such as industry demand and average salary.
+---
 
-A Streamlit dashboard enables students and administrators to interactively explore recommendations, manage data via CRUD operations, and gain actionable insights for career planning.
+## 🧩 Project Aim
 
-**🚀 Key Features**
+To build an intelligent system that analyzes student data and job-market information to give **personalized career suggestions** and **skill recommendations**.
 
-✅ Data Processing with PySpark – Load, clean, and transform large CSV datasets.
-✅ ETL Pipeline – Extract, Transform, and Load (ETL) with schema inference and tokenization.
-✅ Skill-Matching Engine – Uses Jaccard similarity to compute skill-match percentage.
-✅ CRUD Operations – Create, Read, Update, Delete recommendations directly from the UI.
-✅ Job-Market Insights – Analyze top industries, job demand, and salary distributions.
-✅ Interactive Streamlit Dashboard – View recommendations, insights, and manage data visually.
-✅ Scalable & Future-Ready – Ready for ML, NLP, and API-integration extensions.
+---
 
-**🧠 System Workflow**
+## ⚙️ How It Works
 
-**1️⃣ Data Loading**
+1. **Data Loading** – Loads student and job data using PySpark.
+2. **Data Cleaning** – Removes missing values and cleans text.
+3. **Skill Tokenization** – Splits skills for students and job posts.
+4. **Skill Matching** – Calculates how much a student’s skills match job requirements using Jaccard similarity.
+5. **Job Market Analysis** – Finds top industries and average salaries.
+6. **Streamlit App** – Shows recommendations, job insights, and allows adding, updating, or deleting recommendations.
 
-Load career_recommender.csv (students) and all_job_post.csv (jobs).
+---
 
-Infer schema automatically and handle multi-line CSVs.
+## 🧠 Technologies Used
 
-**2️⃣ Data Cleaning & Tokenization**
+| Category      | Tools          |
+| ------------- | -------------- |
+| Big Data      | PySpark        |
+| Web App       | Streamlit      |
+| Data Handling | Pandas         |
+| Visualization | Plotly Express |
+| Language      | Python         |
 
-Remove null/missing values.
+---
 
-Tokenize and normalize skills using PySpark UDF.
+## 🗂️ Project Files
 
-**3️⃣ Skill Matching**
-
-Perform cross-join between students and jobs.
-
-Compute skill-match percentage using Jaccard similarity:
-
-Skill Match (%)=∣𝑆𝑘𝑖𝑙𝑙𝑠𝑠𝑡𝑢𝑑𝑒𝑛𝑡∩𝑆𝑘𝑖𝑙𝑙𝑠𝑗𝑜𝑏 ∣
- ∣𝑆𝑘𝑖𝑙𝑙𝑠𝑠𝑡𝑢𝑑𝑒𝑛𝑡∪𝑆𝑘𝑖𝑙𝑙𝑠𝑗𝑜𝑏 ∣ ×100 
-
-**4️⃣ CRUD Operations**
-
-Create → Add new recommendation
-
-Read → View data and insights
-
-Update → Modify match percentage
-
-Delete → Remove recommendation
-
-**5️⃣ Visualization**
-
-Job-market insights using Plotly Express bar charts.
-
-Top 10 industries and skill-based recommendations.
-
-**6️⃣ Streamlit Dashboard**
-
-View, manage, and interact with recommendations in a modern UI.
-
-
-**🧩 Tech Stack**
-Category	Tools / Libraries	Purpose
-Big Data Processing	PySpark	ETL, transformations, analytics
-Web Framework	Streamlit	User interface & CRUD management
-Visualization	Plotly Express	Charts and job-market insights
-Data Manipulation	Pandas	Convert Spark DataFrames for UI
-Python Core	re, os	String cleaning & environment setup
-
-**📂 Project Structure**
-**career-guidance/
-│
-├── app.py                   
-├── spark_etl.py             
-├── utils.py                 
+```
+career-guidance/
+├── app.py                  # Streamlit interface
+├── spark_etl.py            # PySpark data processing
+├── utils.py                 # Helper functions
 ├── data/
 │   ├── career_recommender.csv
 │   ├── all_job_post.csv
 │   ├── recommendations.parquet
-│
-├── requirements.txt         
-└── README.md            
-**
+├── requirements.txt
+└── README.md
+```
 
+---
 
+## 🧾 Sample Data
 
+**Students (career_recommender.csv)**
 
+| student_name | skills          | cgpa | location |
+| ------------ | --------------- | ---- | -------- |
+| Aadil        | Python, SQL, ML | 8.2  | Chennai  |
 
-**⚙️ Installation & Setup**
-**1️⃣ Clone this repository**
-git clone https://github.com/<your-username>/AI-Career-Guidance-System.git
-cd AI-Career-Guidance-System
+**Jobs (all_job_post.csv)**
 
-**2️⃣ Create and activate a virtual environment**
-python -m venv .venv
-source .venv/bin/activate    # (Windows: .venv\Scripts\activate)
+| job_title    | skills             | industry    | salary   |
+| ------------ | ------------------ | ----------- | -------- |
+| Data Analyst | SQL, Python, Excel | IT/Software | 7,00,000 |
 
-**3️⃣ Install dependencies**
-pip install -r requirements.txt
+---
 
-**4️⃣ Run PySpark ETL**
-python spark_etl.py
+## 🪄 Setup and Run
 
-**5️⃣ Launch the Streamlit Dashboard**
-streamlit run app.py
+1. **Clone the repository**
 
+   ```bash
+   git clone https://github.com/TAMILARASU-A/AI-Career-Guidance-System.git
+   cd AI-Career-Guidance-System
+   ```
 
+2. **Install dependencies**
 
-**📊 Dashboard Preview**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-**1️⃣ Job-Market Insights**
+3. **Run PySpark ETL**
 
-Displays industry-wise job demand and average salary using interactive bar charts.
+   ```bash
+   python spark_etl.py
+   ```
 
-**2️⃣ Personalized Recommendations**
+4. **Start Streamlit app**
 
-Select a student → view top job matches ranked by skill-match %.
+   ```bash
+   streamlit run app.py
+   ```
 
-**3️⃣ Manage Recommendations (CRUD)**
+---
 
-Add, update, or delete student-job matches directly.
+## 🌟 Features
 
-**🔮 Future Enhancements**
+* Load and process large datasets using PySpark
+* Personalized job and skill recommendations
+* Job market insights (demand, salary, industries)
+* CRUD operations (Create, Read, Update, Delete)
+* Easy-to-use Streamlit dashboard
 
-🤖 Machine Learning: Predict best-fit roles and expected salaries.
+---
 
-🧾 NLP: Extract skills from free-text student profiles or resumes.
+## 🔮 Future Add-ons
 
-🌐 API Integration: Fetch live job data from LinkedIn, Indeed, etc.
+* Machine learning to predict job matches
+* NLP for better skill extraction
+* Live job data via APIs
+* Cloud deployment (AWS / GCP / Azure)
+* Interactive dashboards
 
-☁️ Cloud Deployment: Deploy on AWS / GCP / Azure for scalability.
+---
 
-📈 Advanced Dashboards: Use Streamlit or Plotly Dash for deeper insights.
+## 💻 Requirements
 
+| Software  | Version |
+| --------- | ------- |
+| Python    | 3.9+    |
+| PySpark   | 3.5+    |
+| Streamlit | 1.36+   |
+| Pandas    | 2.2+    |
+| Plotly    | 5.22+   |
+| PyArrow   | 15.0+   |
 
+> ⚠️ Make sure Java (JDK 11+) is installed and `JAVA_HOME` is set.
 
-**💻 Requirements**
-Dependency	Version
-Python	3.9+
-PySpark	≥ 3.5.0
-Streamlit	≥ 1.36.0
-Pandas	≥ 2.2.0
-Plotly	≥ 5.22.0
-PyArrow	≥ 15.0.0
+---
 
-⚠️ Ensure JDK (Java 11+) is installed and JAVA_HOME is properly configured.
+## 👨‍💻 Team Members
 
-👨‍💻 Authors
-🧑‍💻 Tamilarasu A 
+### 🧑‍💻 Tamilarasu A (Boss)
 
 🎓 MCA Student – Coimbatore Institute of Technology (CIT), Coimbatore
+💡 Passionate about AI, Data Engineering & Python-based Big Data Solutions
+🔗 [GitHub Profile](https://github.com/TAMILARASU-A)
 
-Email: arasu9725@gmail.com
+---
 
-🔗 GitHub Profile:
-
-👩‍💻 Sridevi R 
+### 👩‍💻 Sridevi R
 
 🎓 MCA Student – Coimbatore Institute of Technology (CIT), Coimbatore
+💡 Aspiring Software Engineer | Interested in Data Analytics, Web Development 
+🔗 [GitHub Profile](https://github.com/Sridevi2108)
 
-Email:	Sridevi21082003@gmail.com
-🔗 GitHub Profile: Sridevi2108
+---
 
+## 🏁 Conclusion
 
-🏁 Conclusion
+This system acts as a **career guide** for students, helping them identify suitable job roles and the right skills to improve, based on real job-market data.
 
-The AI-Powered Career Guidance & Skill Recommendation System acts as a smart bridge between students and the job market, helping learners identify the most relevant opportunities and skills to focus on for a successful career path.
+---
