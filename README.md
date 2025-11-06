@@ -137,7 +137,7 @@ career-guidance/
 ### 🧑‍💻 Tamilarasu A 
 
 🎓 MCA Student – Coimbatore Institute of Technology (CIT), Coimbatore
-💡 Passionate about AI, Data Engineering & Python-based Big Data Solutions
+💡 Passionate about AI, Data Analytics and Full Stack Development
 🔗 [GitHub Profile](https://github.com/TAMILARASU-A)
 
 ---
