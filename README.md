@@ -134,7 +134,7 @@ career-guidance/
 
 ## 👨‍💻 Team Members
 
-### 🧑‍💻 Tamilarasu A (Boss)
+### 🧑‍💻 Tamilarasu A 
 
 🎓 MCA Student – Coimbatore Institute of Technology (CIT), Coimbatore
 💡 Passionate about AI, Data Engineering & Python-based Big Data Solutions
