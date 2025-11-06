@@ -145,7 +145,7 @@ career-guidance/
 ### 👩‍💻 Sridevi R
 
 🎓 MCA Student – Coimbatore Institute of Technology (CIT), Coimbatore
-💡 Aspiring Software Engineer | Interested in Data Analytics, Web Development 
+💡 Aspiring Software Engineer | Interested in AI & ML and Data Analytics, Web Development 
 🔗 [GitHub Profile](https://github.com/Sridevi2108)
 
 ---
